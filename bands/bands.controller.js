@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('bands')
-    .controller('BandsController', function ($scope, AdminService) {
+    .controller('BandsController', function ($scope, BandsService) {
 
     });
 

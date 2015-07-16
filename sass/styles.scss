@@ -1,0 +1,20 @@
+$header: #022C3B;
+$border: #cdebf4;
+$background: #493822;
+$green: #A7BA45;
+$accent: #D1DE36;
+$text: #767777;
+
+@import "partials/bands-main";
+
+
+.btn {
+  background: $accent;
+  color: $green;
+  &:hover {
+    background: $background;
+    color: $accent;
+    border: 1px solid $accent;
+    transition: ease .25s;
+  }
+}

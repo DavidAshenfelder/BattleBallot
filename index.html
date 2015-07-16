@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>BOtB</title>
-  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="sass/styles.css" media="screen" title="no title" charset="utf-8">
+
 
 </head>
-<body>
+<body ng-app="main">
+  <ng-view></ng-view>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
@@ -22,6 +24,10 @@
 <script src="admin/admin.module.js" charset="utf-8"></script>
 <script src="admin/admin.service.js" charset="utf-8"></script>
 <script src="admin/admin.controller.js" charset="utf-8"></script>
+
+<script src="bands/bands.module.js" charset="utf-8"></script>
+<script src="bands/bands.service.js" charset="utf-8"></script>
+<script src="bands/bands.controller.js" charset="utf-8"></script>
 
 
 </body>

@@ -9,11 +9,11 @@
       $routeProvider
         .when('/admin', {
           templateUrl: 'views/main.html',
-          controller: 'BandsController'
+          controller: 'AdminController'
         })
         .when('admin/:id', {
           templateUrl: 'views/band-detail.html',
-          controller: 'BandsController'
+          controller: 'AdminController'
         })
 
 
