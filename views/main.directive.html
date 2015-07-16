@@ -4,13 +4,13 @@
   <h3>{{band.genre}}</h3>
   <span>{{band.members}}</span><br>
   <span><a href="{{band.website}}">Website</a></span><br>
-  <span>{{band.hometown}}, VA</span><br><br>
+  <span>{{band.hometown}}</span><br><br>
   <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand">Edit</button></a>
 
 </div>
 
 <div class="right-side">
-  <img class="band-image" src="http://www.mtv.com/crop-images/2013/09/11/Foo%20Fighters%20officail.jpg" alt="">
+  <img class="band-image" ng-src="{{band.picture}}" alt="">
 
 </div>
 
