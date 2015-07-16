@@ -15,6 +15,10 @@
           templateUrl: 'admin/views/band-detail.html',
           controller: 'AdminController'
         })
+        .when('/admin/add-band', {
+          templateUrl: 'admin/views/add-band.html',
+          controller: 'AdminController'
+        })
 
 
     });

@@ -1,24 +1,21 @@
 
+  <ul class="nav nav-tabs nav-color">
+    <li role="presentation" class="active"><a href="/admin">Bands</a></li>
+    <li role="presentation"><a href="/admin/add-band">Add Band</a></li>
+    <li role="presentation"><a href="/">User View</a></li>
+      </ul>
 
-<article ng-repeat="band in bands">
-  <div class="left-side">
-  <h1>Foo Fighters</h1>
-  <h3>Rock</h3>
-  <span>Dave Grohl, Taylor Hawkins, etc.</span>
-  <span><a href="www.foofighters.com">Website</a></span>
-  <span>Richmond, VA</span>
+
+
+
+<h1 class="title">Band Control</h1>
+<div class="center-article">
+  <band-directive band="band" data-id={{band.id}} editBand="updateBand(id)" ng-repeat="band in bands">
+
+
+
+
+  </band-directive>
+
 
 </div>
-
-<div class="right-side">
-  <img src="http://www.mtv.com/crop-images/2013/09/11/Foo%20Fighters%20officail.jpg" alt="">
-
-</div>
-
-
-
-
-
-
-
-</article>
