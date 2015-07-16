@@ -1,0 +1,14 @@
+<article class="admin-article" data-id="{{band.id}}">
+
+  <input type="text" placeholder="{{band.name}}" ng-model="updateBand.name">
+  <input type="text" placeholder="{{band.genre}}" ng-model="updateBand.genre">
+  <input type="text" placeholder="{{band.members}}" ng-model="updateBand.members">
+  <input type="text" placeholder="{{band.website}}" ng-model="updateBand.website">
+  <input type="text" placeholder="{{band.hometown}}" ng-model="updateBand.hometown">
+  <input type="text" placeholder="{{band.picture}}" ng-model="updateBand.picture">
+  <a href="/admin/" ng-click="editBand(updateBand, id)"><button class="editBand">Update</button></a>
+
+
+
+
+</article>

@@ -19,8 +19,6 @@
           templateUrl: 'admin/views/add-band.html',
           controller: 'AdminController'
         })
-
-
     });
 
 

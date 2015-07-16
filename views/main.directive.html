@@ -1,10 +1,10 @@
-<article class="admin-article">
+<article class="admin-article" data-id="{{band.id}}">
   <div class="left-side">
   <h1>{{band.name}}</h1>
   <h3>{{band.genre}}</h3>
   <span>{{band.members}}</span><br>
   <span><a href="{{band.website}}">Website</a></span><br>
-  <span>{{band.hometown}}, VA</span><br><br>
+  <span>{{band.hometown}}</span><br><br>
   <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand">Edit</button></a>
 
 </div>

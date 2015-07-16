@@ -6,8 +6,8 @@
       AdminService.getBands().then(function(bands) {
         $scope.bands = bands;
       })
-      $scope.updateBand = function(id) {
-        AdminService.updateBand()
+      $scope.updateBand = function(id, updateBand) {
+        AdminService.updateBand(id, updateBand)
 
       }
     });
