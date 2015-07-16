@@ -1,0 +1,21 @@
+
+  <ul class="nav nav-tabs nav-color">
+    <li role="presentation" class="active"><a href="/admin">Bands</a></li>
+    <li role="presentation"><a href="/admin/add-band">Add Band</a></li>
+    <li role="presentation"><a href="/">User View</a></li>
+      </ul>
+
+
+
+
+<h1 class="title">Band Control</h1>
+<div class="center-article">
+  <band-directive band="band" data-id={{band.id}} editBand="updateBand(id)" ng-repeat="band in bands">
+
+
+
+
+  </band-directive>
+
+
+</div>
