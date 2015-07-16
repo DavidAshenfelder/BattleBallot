@@ -1,11 +1,11 @@
 (function () {
   'use strict';
   angular
-    .module('admin')
+    .module('main')
     .directive('bandDirective', function () {
       return {
         restrict: 'E', // E - element, A - attribute, C - class
-        templateUrl: 'admin/views/main.directive.html',
+        templateUrl: 'views/main.directive.html',
         scope: {
           band: '=',
           extra: '@',
