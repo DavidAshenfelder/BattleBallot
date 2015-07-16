@@ -1,0 +1,30 @@
+.bandMainWrapper {
+  background-color: $background;
+  color: $text;
+}
+
+.panel {
+  background-color: $background;
+  .panel-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $background;
+    border: 1px solid $accent;
+    .btn {
+      width: 7%;
+    }
+    .bandMainHeader {
+      font-size: 3vmax;
+      width: 90%;
+      text-align: center;
+      color: $green;
+      margin: 1%;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}
