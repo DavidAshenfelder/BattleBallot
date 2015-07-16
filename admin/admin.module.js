@@ -2,23 +2,20 @@
   'use strict';
 
   angular
-    .module('bands', [
+    .module('admin', [
       'ngRoute'
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/bands', {
-          templateUrl: 'views/bands.html',
+        .when('/admin', {
+          templateUrl: 'views/main.html',
           controller: 'BandsController'
         })
-        .when('bands/:id', {
+        .when('admin/:id', {
           templateUrl: 'views/band-detail.html',
           controller: 'BandsController'
         })
-        .when('leaderboard', {
-          templateUrl: 'views/leaderboard.html',
-          controller: 'BandsController'
-        })
+
 
     });
 

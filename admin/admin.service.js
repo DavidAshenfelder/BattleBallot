@@ -1,8 +1,8 @@
 (function () {
   'use strict';
   angular
-    .module('bands')
-    .factory('BandsService', function ($http, $rootScope) {
+    .module('admin')
+    .factory('AdminService', function ($http, $rootScope) {
 
     var url = '';
     var getBands = function() {
