@@ -6,7 +6,7 @@
 
     var url = '';
     var getBands = function() {
-      $http.get(url);
+      return $http.get(url);
     };
 
     var addBand = function(newBand) {
