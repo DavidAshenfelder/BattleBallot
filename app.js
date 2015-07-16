@@ -5,7 +5,8 @@
     .module('main', [
       'ngRoute',
       'underscore',
-      'admin'
+      'admin',
+      'bands'
     ])
     .config(function ($routeProvider) {
       $routeProvider
