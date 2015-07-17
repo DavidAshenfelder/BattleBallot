@@ -6,7 +6,8 @@
       'ngRoute',
       'underscore',
       'admin',
-      'bands'
+      'bands',
+      'ui.bootstrap',
     ])
     .config(function ($routeProvider) {
       $routeProvider

@@ -5,9 +5,15 @@
   <span>{{band.members}}</span><br>
   <span><a href="{{band.website}}">Website</a></span><br>
   <span>{{band.hometown}}</span><br><br>
-  <a href="#/admin/:{{band.id}}"><button class="editBand" >Edit</button></a>
-<!--   <a href="/admin/:{{band.id}}"><button class="editBand" ng-if="isAuth()">Edit</button></a>
-<a href="" ng-click="vote()" ng-if="!isAuth()"><button class="editBand">Vote</button></a> -->
+  <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
+  <accordion ng-if="!isAuth">
+  <accordion-group is-open="status.open">
+     <accordion-heading>
+      Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+     </accordion-heading>
+  <input type="text" class="vote" placeholder="1-10">
+  <input type="button" name="name" value="Submit"  ng-click="vote()">
+</accordion-group>
 </div>
 <div class="right-side">
   <img class="band-image" ng-src="{{band.picture}}" alt="">
