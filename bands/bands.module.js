@@ -3,7 +3,8 @@
 
   angular
     .module('bands', [
-      'ngRoute'
+      'ngRoute',
+      'ui.bootstrap'
     ])
     .config(function ($routeProvider) {
       $routeProvider

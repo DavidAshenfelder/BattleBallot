@@ -1,9 +1,9 @@
 <section class="panel bandMainWrapper">
   <div class="panel panel-header">
     <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
-    <a href="#/admin"><button class="btn">Login</button></a>
+    <a href="#/admin" ng-click="authenticate()" ng-model="isAuth"><button class="btn">Login</button></a>
   </div>
-  <band-directive band="band" data-id={{band.id}} editBand="updateBand(id)">
+  <band-directive band="band" data-id={{band.id}} editBand="updateBand(id)" ng-repeat="band in bands">
 
 
   </band-directive>

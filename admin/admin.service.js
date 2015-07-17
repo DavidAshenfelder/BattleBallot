@@ -4,7 +4,8 @@
     .module('admin')
     .factory('AdminService', function ($http, $rootScope) {
 
-    var url = '';
+    var url
+    ;
     var getBands = function() {
       return $http.get(url);
     };
