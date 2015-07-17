@@ -1,10 +1,13 @@
-$background: #022C3B ;
+$background: #09526b;
+$header: #022C3B ;
 $border: #cdebf4 ;
 $green: #A7BA45 ;
 $accent: #D1DE36 ;
 $text: #767777 ;
 
 @import "partials/bands-main";
+@import "partials/admin-main";
+@import "partials/leaderboard";
 
 body {
   font-family: 'Lato', sans-serif;
@@ -12,9 +15,10 @@ body {
   color:white
 }
 
-.btn {
+a button {
   background: $accent;
   color: $green;
+  font-size: 2vmax;;
   &:hover {
     background: $background;
     color: $accent;
@@ -23,60 +27,15 @@ body {
   }
 }
 
-.admin-article {
-padding: 20px;
-border: 1px solid $border;
-width: 70%;
-margin-left: auto;
-margin-right: auto;
-}
-
-.right-side {
-  display: inline-block;
-  width: 50%;
-  vertical-align: top;
-}
-
-.left-side {
-  display: inline-block;
-  width: 40%;
-  vertical-align: middle;
-}
-
-.band-image {
-  height: 200px;
-}
-
-.center-article {
-  text-align: center;
-
-}
-
-.title {
-  text-align: center;
-  font-weight: 100;
-  font-size: 4em;
-  color: $accent;
-  margin-bottom: 20px;
-}
-
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-  color: $background;
-}
-.nav-tabs>li>a {
-  color: $accent;
-}
-.editBand {
-  color: $background;
-}
-.nav-tabs > li > a:hover {
-  color: $background;
-}
-
-.nav-tabs {
-  font-weight: 300;
-  font-size: 1.3em;
+ .btn {
+  background: $accent;
+  color: $green;
+  &:hover {
+    background: $background;
+    color: $accent;
+    border: 1px solid $accent;
+    transition: ease .25s;
+  }
 }
 .input-form {
   font-size: 20px;

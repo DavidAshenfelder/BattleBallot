@@ -19,7 +19,6 @@
           templateUrl: 'admin/views/band-detail.html',
           controller: 'AdminController'
         })
-
     });
 
 

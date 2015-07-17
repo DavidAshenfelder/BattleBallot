@@ -11,7 +11,11 @@
           templateUrl: 'bands/views/main.html',
           controller: 'BandsController'
         })
-        .when('bands/:id', {
+        .when('/leaderboard', {
+          templateUrl: 'bands/views/leaderboard.html',
+          controller: 'BandsController'
+        })
+        .when('/:id', {
           templateUrl: 'bands/views/band-detail.html',
           controller: 'BandsController'
         })
