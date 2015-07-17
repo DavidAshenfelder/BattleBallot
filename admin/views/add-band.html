@@ -2,7 +2,7 @@
   <ul class="nav nav-tabs nav-color">
     <li role="presentation"><a href="#/admin">Bands</a></li>
     <li role="presentation" class="active"><a href="#/admin/add-band">Add Band</a></li>
-    <li role="presentation"><a href="/">User View</a></li>
+    <li role="presentation"><a href="#/">User View</a></li>
   </ul>
 
   <h1 class="title">Add Band</h1><br>
@@ -10,7 +10,8 @@
 <form action="" class="input-form">
   <input type="text" placeholder="Band Name" size="60" ng-model="newBand.name"><br>
   <input type="text" placeholder="Genre" size="60" ng-model="newBand.genre"><br>
-  <input type="text" placeholder="Members" size="60" ng-model="newBand.members"><br>
+  <input type="text" placeholder="Members" size="60" ng-model="newBand.member_names"><br>
+  <input type="text" placeholder="# of Members" size="60" ng-model="newBand.num_members"><br>
   <input type="text" placeholder="Image URL" size="60" ng-model="newBand.picture"><br>
   <input type="text" placeholder="Hometown"size="60" ng-model="newBand.hometown"><br>
   <input type="text" placeholder="Website URL" size="60" ng-model="newBand.website"><br>

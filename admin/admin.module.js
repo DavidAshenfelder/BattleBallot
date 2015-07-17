@@ -7,6 +7,10 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
+      .when('/', {
+        templateUrl: 'bands/views/main.html',
+        controller: 'BandsController'
+      })
         .when('/admin', {
           templateUrl: 'admin/views/main-admin.html',
           controller: 'AdminController'
@@ -19,6 +23,7 @@
           templateUrl: 'admin/views/band-detail.html',
           controller: 'AdminController'
         })
+
     });
 
 
