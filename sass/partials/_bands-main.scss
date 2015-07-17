@@ -1,23 +1,24 @@
 .bandMainWrapper {
-  background-color: $background;
+  /* background-color: $background; */
   color: $text;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/crowd-background.jpeg) no-repeat no-repeat fixed;
+  background-size: cover;
+  width: 100%;
 }
 
 .panel {
-  background-color: $background;
   .panel-header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: $background;
+    background-color: $header;
     border: 1px solid $accent;
-    .btn {
-      width: 7%;
-    }
+    width: auto;
     .bandMainHeader {
       font-size: 3vmax;
       width: 90%;
+      height: auto;
       text-align: center;
       color: $green;
       margin: 1%;
