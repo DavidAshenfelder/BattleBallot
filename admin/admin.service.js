@@ -21,8 +21,8 @@
       })
     };
 
-    var updateBand = function(id, updatedBand) {
-      $http.put(url + '/' + id).success(function(resp) {
+    var updateBand = function(id, updateBand) {
+      $http.patch(url + '/' + id, updateBand).success(function(resp) {
         $rootScope.$broadcast('band:updated');
       })
     };

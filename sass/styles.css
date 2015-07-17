@@ -78,6 +78,14 @@
   font-weight: 300;
   font-size: 1.3em; }
 
+.input-form {
+  font-size: 20px;
+  color: #022C3B; }
+
+.submit-button {
+  margin-top: 7px;
+  color: #022C3B; }
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #09526b;
@@ -101,5 +109,6 @@ a button {
     color: #D1DE36;
     border: 1px solid #D1DE36;
     transition: ease .25s; }
+
 
 /*# sourceMappingURL=styles.css.map */
