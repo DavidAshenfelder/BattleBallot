@@ -1,0 +1,64 @@
+.admin-article {
+padding: 20px;
+border: 1px solid $accent;
+background-color: $header;
+border-radius: 5px;
+width: 80%;
+margin: 1%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.left-side {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.middle {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.right-side {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+}
+
+.band-image {
+  height: 200px;
+}
+
+.center-article {
+  text-align: center;
+
+}
+
+.title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 4em;
+  color: $accent;
+  margin-bottom: 20px;
+}
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: $background;
+}
+.nav-tabs>li>a {
+  color: $accent;
+}
+.editBand {
+  color: $background;
+}
+.nav-tabs > li > a:hover {
+  color: $background;
+}
+
+.nav-tabs {
+  font-weight: 300;
+  font-size: 1.3em;
+}

@@ -1,0 +1,70 @@
+<section class="panel bandMainWrapper">
+  <div class="panel panel-header">
+    <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
+  </div>
+
+  <article class="admin-article">
+    <div class="left-side">
+      <img class="band-image" src="http://www.fillmurray.com/100/100" alt="">
+    </div>
+    <div class="middle">
+    <h1>Motley Brew</h1>
+    <h3>Rock</h3>
+    <span>Tom Bryan, Stan Brown, Lee Tomkins</span><br>
+    <span><a href="{{band.website}}">Website</a></span><br>
+    <span>Charleston, SC</span><br><br>
+  </div>
+  <div class="right-side">
+    <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand">Edit</button></a>
+    <a href="" ng-click="vote()"><button class="editBand">Vote</button></a>
+  </div>
+  </article>
+
+  <article class="admin-article">
+    <div class="left-side">
+      <img class="band-image" src="http://www.fillmurray.com/100/100" alt="">
+    </div>
+    <div class="middle">
+    <h1>Motley Brew</h1>
+    <h3>Rock</h3>
+    <span>Tom Bryan, Stan Brown, Lee Tomkins</span><br>
+    <span><a href="{{band.website}}">Website</a></span><br>
+    <span>Charleston, SC</span><br><br>
+  </div>
+  <div class="right-side">
+    <a href="/admin/:{{band.id}}" ng-click="editBand()" ng-if="isAuth()"><button class="editBand">Edit</button></a>
+    <a href="" ng-click="vote()"><button class="editBand" ng-if="!isAuth()">Vote</button></a>
+  </div>
+  </article>
+  <article class="admin-article">
+    <div class="left-side">
+      <img class="band-image" src="http://www.fillmurray.com/100/100" alt="">
+    </div>
+    <div class="middle">
+    <h1>Motley Brew</h1>
+    <h3>Rock</h3>
+    <span>Tom Bryan, Stan Brown, Lee Tomkins</span><br>
+    <span><a href="{{band.website}}">Website</a></span><br>
+    <span>Charleston, SC</span><br><br>
+  </div>
+  <div class="right-side">
+    <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand">Edit</button></a>
+    <a href="" ng-click="vote()"><button class="editBand">Vote</button></a>
+  </div>
+  </article>
+  <article class="admin-article">
+    <div class="left-side">
+      <img class="band-image" src="http://www.fillmurray.com/100/100" alt="">
+    </div>
+    <div class="middle">
+    <h1>Motley Brew</h1>
+    <h3>Rock</h3>
+    <span>Tom Bryan, Stan Brown, Lee Tomkins</span><br>
+    <span><a href="{{band.website}}">Website</a></span><br>
+    <span>Charleston, SC</span><br><br>
+  </div>
+  <div class="right-side">
+    <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand">Edit</button></a>
+    <a href="" ng-click="vote()"><button class="editBand">Vote</button></a>
+  </div>
+  </article>
