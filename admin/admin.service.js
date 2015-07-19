@@ -3,9 +3,11 @@
   angular
     .module('admin')
     .factory('AdminService', function ($http, $rootScope) {
+
       var url = 'http://lit-lowlands-6334.herokuapp.com/api/bands.json'
       var url2 = 'http://lit-lowlands-6334.herokuapp.com/api/bands'
     // var url = 'http://10.0.10.48:3008/api/bands.json';
+
     var getBands = function() {
       return $http.get(url);
     };
@@ -13,7 +15,7 @@
       console.log("BAND", {band: newBand})
       $http.post(url, newBand).success(function(resp) {
         $rootScope.$broadcast('band:added');
-        
+
       })
     };
     var deleteBand = function(id) {

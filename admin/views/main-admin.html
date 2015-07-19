@@ -3,10 +3,14 @@
     <li role="presentation" class="active"><a href="#/admin">Bands</a></li>
     <li role="presentation"><a href="#/admin/add-band">Add Band</a></li>
     <li role="presentation"><a href="#/">User View</a></li>
+    <a href="#/admin" ng-click="authenticate()" ng-if="!isAuth"><button class="btn">Login</button></a>
+    <a href="#/" ng-click="unAuthenticate()" ng-if="isAuth"><button class="btn">LogOut</button></a>
   </ul>
 
-<h1 class="title">Band Control</h1>
-<div class="center-article">
+
+<h1 class="title" ng-if="isAuth">Band Control</h1>
+<!-- <div class="center-article" ng-if="isAuth"> -->
+
   <band-directive band="band" data-id={{band.id}} ng-repeat="band in bands">
 
 
@@ -15,4 +19,5 @@
   </band-directive>
 
 
-</div>
+<!-- </div>
+ -->

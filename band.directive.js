@@ -6,12 +6,12 @@
       return {
         restrict: 'E', // E - element, A - attribute, C - class
         templateUrl: 'views/main.directive.html',
+        transclude: true,
         scope: {
           band: '=',
           extra: '@',
           editBand: '&',
-          deleteBand: '&'
-          
+          voteFor: '&'
         },
         link: function (scope, element, attributes) {
 
@@ -19,4 +19,4 @@
         }
       };
     });
-})();
+})(); 
