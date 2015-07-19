@@ -2,10 +2,11 @@
   <div class="left-side">
   <h1>{{band.name}}</h1>
   <h3>{{band.genre}}</h3>
-  <span>{{band.members}}</span><br>
+  <span>{{band.member_names}}</span><br>
   <span><a href="{{band.website}}">Website</a></span><br>
   <span>{{band.hometown}}</span><br><br>
-  <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="!isAuth">Edit</button></a>
+
+  <a href="#/admin/{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="!isAuth">Edit</button></a>
   <accordion ng-if="isAuth">
     <accordion-group is-open="status.open">
      <accordion-heading>
@@ -16,6 +17,7 @@
        <button type="button" name="name" value="Submit"  ng-click="voteFor()">Submit</button>
      </form>
   </accordion-group>
+
 </accordion>
 </div>
 <div class="right-side">
