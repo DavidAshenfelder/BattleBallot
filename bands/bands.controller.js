@@ -36,10 +36,10 @@
       //     console.log($rootScope.isAuth);
       // }
 
-      $scope.vote = function (score, bandId) {
-        console.log("score in controller:", score);
+      $scope.vote = function (scoreCount, bandId) {
+        console.log("score in controller:", scoreCount);
         console.log("id in controller:", bandId);
-        BandsService.voteBand({vote: score, band_id: Number(bandId)});
+        BandsService.voteBand({vote: scoreCount, band_id: Number(bandId)});
       }
       var watchCallback = function() {
         BandsService.getBands();
