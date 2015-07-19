@@ -3,8 +3,28 @@
     <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
     <a href="#/admin" ng-click="authenticate()" ng-model="isAuth"><button class="btn">Login</button></a>
   </div>
-  <band-directive band="band" data-id={{band.id}} editBand="updateBand(id)" ng-repeat="band in bands">
-
-
-  </band-directive>
+  <article class="admin-article" data-id="{{band.id}}" ng-repeat="band in bands">
+    <div class="left-side">
+      <img class="band-image" ng-src="{{band.picture}}" alt="">
+    </div>
+    <div class="middle">
+    <h1>{{band.name}}</h1>
+    <h3>{{band.genre}}</h3>
+    <span>{{band.members}}</span><br>
+    <span><a href="{{band.website}}">Website</a></span><br>
+    <span>{{band.hometown}}</span><br><br>
+  </div>
+  <div class="right-side">
+    <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
+      <accordion ng-if="!isAuth">
+        <accordion-group is-open="status.open">
+         <accordion-heading>
+          Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+         </accordion-heading>
+        <input type="Number" ng-model="band.total_score" placeholder="1-10">
+        <input type="button" name="name" value="Submit"  ng-click="vote(band, band.id)">
+       </accordion-group>
+      </accordion>
+    </div>
+  </article>
 </section>

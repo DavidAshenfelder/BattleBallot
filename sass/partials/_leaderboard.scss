@@ -1,0 +1,70 @@
+.admin-article {
+padding: 20px;
+border: 1px solid $accent;
+background-color: $header;
+border-radius: 5px;
+width: 90%;
+margin: 1%;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.left-side {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+.middle {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.right-side {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+}
+
+.band-image {
+  height: 100%;
+  width: 100%;
+  margin-right:30px;
+}
+
+.center-article {
+  text-align: center;
+
+}
+
+.title {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3vmax;
+  color: $accent;
+  margin-bottom: 20px;
+}
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: $background;
+}
+.nav-tabs>li>a {
+  color: $accent;
+}
+.editBand {
+  color: $background;
+}
+.nav-tabs > li > a:hover {
+  color: $background;
+}
+
+.nav-tabs {
+  font-weight: 300;
+  font-size: 1.3em;
+}
