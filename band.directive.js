@@ -9,7 +9,9 @@
         scope: {
           band: '=',
           extra: '@',
-          editBand: '&'
+          editBand: '&',
+          deleteBand: '&'
+          
         },
         link: function (scope, element, attributes) {
 

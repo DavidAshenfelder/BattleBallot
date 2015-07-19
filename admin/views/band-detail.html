@@ -8,7 +8,15 @@
 
 
       <h1 class="title">Edit Band</h1>
-<detail-directive band="band" data-id={{band.id}} editBand="updateBand(id, updateBand)" >
+      <article class="center-article" data-id="{{band.id}}">
 
 
-</detail-directive>
+      <input class="input-text" type="text" ng-model="band.name"  size="70"><br>
+        <input class="input-text" type="text" ng-model="band.genre" size="70"><br>
+        <input class="input-text" type="text" ng-model="band.members" size="70"><br>
+        <input class="input-text" type="text" ng-model="band.website" size="70"><br>
+        <input class="input-text" type="text" ng-model="band.hometown" size="70"><br>
+        <input  class="input-text" type="text" ng-model="band.picture"  size="70"><br>
+        <a href="#/admin/" ng-click="updateBand(band.id, band)"><button class="editBand">Update</button></a>
+        <a href="#/admin/" ng-click="deleteBand(band.id)"><button class="editBand">Delete</button></a>
+      </article>
