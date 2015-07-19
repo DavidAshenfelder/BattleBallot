@@ -3,7 +3,7 @@
   angular
     .module('admin')
     .factory('AdminService', function ($http, $rootScope) {
-    var url = 'http://10.0.10.48:3008/api/bands.json';
+    var url = 'http://lit-lowlands-6334.herokuapp.com/api/bands.json';
     var getBands = function() {
       return $http.get(url);
     };
