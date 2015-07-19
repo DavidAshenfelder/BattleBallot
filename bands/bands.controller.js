@@ -8,15 +8,16 @@
         $scope.bands = bands.data;
       });
 
-      // var avgScore = function () {
-      //   BandsService.buildScoreUrl()
-      // }
+      var avgScore = function () {
+        BandsService.buildScoreUrl().then(function () {
+        });
+      }
 
-    //   var getVotes = function () {
-    //     BandsService.getScore().then(function () {
-    //
-    //     });
-    // }
+      var getVotes = function () {
+        BandsService.getScore().then(function (uniques) {
+          $scope.uniques = uniques;
+        });
+    }
 
       var getBands = function() {
         BandsService.getBands().then(function(bands) {
@@ -29,22 +30,21 @@
         })
       };
 
-      $scope.vote = function (scoreCount, bandId) {
-        console.log("score in controller:", scoreCount);
-        console.log("id in controller:", bandId);
-        BandsService.voteBand({vote: Number(scoreCount)}, Number(bandId));
-      }
+      //
+      // $scope.authenticate = function () {
+      //   $rootScope.isAuth = true
+      //     console.log($rootScope.isAuth);
+      // }
 
-      $scope.updateScore = function (bandId, band) {
-        console.log("score in controller:", band);
+      $scope.vote = function (score, bandId) {
+        console.log("score in controller:", score);
         console.log("id in controller:", bandId);
-        BandsService.putScore(bandId, {band: {total_score: [{vote: band.total_score}]}})
-      };
-      // {band: {total_score: [{vote: Number(band.total_score)}]}}
+        BandsService.voteBand({vote: score, band_id: Number(bandId)});
+      }
       var watchCallback = function() {
         BandsService.getBands();
       };
-      // getVotes();
+      getVotes();
       // avgScore();
       $scope.$on('vote:casted', watchCallback)
     });

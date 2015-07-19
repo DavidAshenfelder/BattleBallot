@@ -31,38 +31,36 @@
       })
     }
 
-    // var voteForBand = function(score) {
-    //   var score = {};
-    //   score.vote = score.vote;
-    //   score.band_id = score.band_id;
-    //   $http.post(urlScore, score).success(function(resp) {
-    //     $rootScope.$broadcast('score:updated');
-    //   });
-    // };
-
     var voteForBand = function(score) {
       console.log(score);
-      var score = {};
-      score.total_score.vote = score.vote;
-      $http.put(baseUrl + '/' + id + '.json', score).success(function(resp) {
+      $http.post(urlScore, score).success(function(resp) {
         $rootScope.$broadcast('score:updated');
       });
     };
 
-    var putScore = function(id, band) {
-      console.log(band);
-      console.log(id);
-      $http.put(baseUrl + '/' + id + '.json', band).success(function(resp) {
-
-        })
-      }
+    // var voteForBand = function(score) {
+    //   console.log(score);
+    //   var score = {};
+    //   score.total_score.vote = score.vote;
+    //   $http.put(baseUrl + '/' + id + '.json', score).success(function(resp) {
+    //     $rootScope.$broadcast('score:updated');
+    //   });
+    // };
+    //
+    // var putScore = function(id, band) {
+    //   console.log(band);
+    //   console.log(id);
+    //   $http.put(baseUrl + '/' + id + '.json', band).success(function(resp) {
+    //
+    //     })
+    //   }
 
   return {
     voteBand: voteForBand,
     getBands: getBands,
     getScore: getScore,
     buildScoreUrl: buildScoreUrl,
-    putScore: putScore,
+    // putScore: putScore,
   };
     });
 })();
