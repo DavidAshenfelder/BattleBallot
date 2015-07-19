@@ -3,6 +3,7 @@ $header: #022C3B ;
 $border: #cdebf4 ;
 $green: #A7BA45 ;
 $accent: #D1DE36 ;
+$secondaryAccent: #2779AA;
 $text: #767777 ;
 
 @import "partials/bands-main";
@@ -50,9 +51,11 @@ a button {
 .panel-default .panel-heading, .panel-collapse .panel-body {
   text-align: center;
   input {
-    background-color:$background;
+    background-color:$secondaryAccent;
+    color: $text;
     margin: .5%;
     text-align: center;
+    width: 100%;
   }
 }
 

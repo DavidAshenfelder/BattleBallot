@@ -5,13 +5,10 @@
   </div>
 
   <article class="admin-article" data-id="{{band.id}}" ng-repeat="band in bands">
-    <!-- <div class="left-side">
-      <img class="band-image" ng-src="{{band.picture}}" alt="">
-    </div> -->
     <div class="middle">
-    <h1>{{band.name}}</h1>
+    <h1 class="band-name">{{band.name}}</h1>
   </div>
-  <div class="right-side">
+  <div class="right-side padding">
     <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
     <accordion ng-if="!isAuth">
     <accordion-group is-open="status.open">

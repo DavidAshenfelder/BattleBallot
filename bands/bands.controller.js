@@ -39,7 +39,7 @@
       $scope.vote = function (scoreCount, bandId) {
         console.log("score in controller:", scoreCount);
         console.log("id in controller:", bandId);
-        BandsService.voteBand({vote: scoreCount, band_id: Number(bandId)});
+        BandsService.voteBand({vote: Number(scoreCount), band_id: Number(bandId)});
       }
       var watchCallback = function() {
         BandsService.getBands();

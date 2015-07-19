@@ -1,5 +1,6 @@
 <section class="panel bandMainWrapper">
   <div class="panel panel-header">
+    <a href="#/leaderboard"><button class="btn">Leaderboard</button></a>
     <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
     <a href="#/admin" ng-click="authenticate()" ng-model="isAuth"><button class="btn">Login</button></a>
   </div>
@@ -21,7 +22,7 @@
          <accordion-heading>
           Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
          </accordion-heading>
-        <input type="Number" ng-model="score" placeholder="1-10">
+        <input type="text" ng-model="score" placeholder="1-10">
         <input type="button" name="name" value="Submit"  ng-click="vote(score, band.id)">
        </accordion-group>
       </accordion>
