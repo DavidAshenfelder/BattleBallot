@@ -11,7 +11,7 @@
     <div class="middle">
     <h1>{{band.name}}</h1>
   </div>
-  <div class="right-side">
+  <div class="right-side-user">
     <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
     <accordion ng-if="!isAuth">
     <accordion-group is-open="status.open">
