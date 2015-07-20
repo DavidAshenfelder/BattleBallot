@@ -24,6 +24,16 @@
       width: 70px;
       height: 70px; }
 
+.band-title {
+  color: white; }
+
+.left-side-user {
+  width: 40%;
+  margin-right: 20px; }
+
+span.ng-scope {
+  color: #09526b; }
+
 .admin-article {
   padding: 20px;
   border: 1px solid #D1DE36;
@@ -39,7 +49,7 @@
 
 .left-side {
   display: inline-block;
-  width: 20%;
+  width: 60%;
   vertical-align: top;
   margin-right: 30px; }
 
@@ -50,7 +60,7 @@
 
 .right-side {
   display: inline-block;
-  width: 20%;
+  width: 38%;
   text-align: right; }
 
 .band-image {
@@ -99,7 +109,7 @@
 
 .left-side {
   display: inline-block;
-  width: 20%;
+  width: 60%;
   vertical-align: top;
   margin-right: 30px; }
 
@@ -108,7 +118,7 @@
   width: 50%;
   vertical-align: middle; }
 
-.right-side {
+.right-side-user {
   display: inline-block;
   width: 20%;
   text-align: right; }
