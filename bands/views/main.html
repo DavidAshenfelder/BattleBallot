@@ -4,12 +4,12 @@
     <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
     <a href="#/admin" ng-click="authenticate()" ng-model="isAuth"><button class="btn">Login</button></a>
   </div>
-  <article class="admin-article" data-id="{{band.id}}" ng-repeat="band in bands">
-    <div class="left-side">
+  <article class="admin-article band-title" data-id="{{band.id}}" ng-repeat="band in bands">
+    <div class="left-side-user">
       <img class="band-image" ng-src="{{band.picture}}" alt="">
     </div>
     <div class="middle">
-    <h1>{{band.name}}</h1>
+    <h1 >{{band.name}}</h1>
     <h3>{{band.genre}}</h3>
     <span>{{band.members}}</span><br>
     <span><a href="{{band.website}}">Website</a></span><br>
@@ -19,7 +19,7 @@
     <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
       <accordion ng-if="!isAuth">
         <accordion-group is-open="status.open">
-         <accordion-heading>
+         <accordion-heading class="vote-color">
           Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
          </accordion-heading>
         <input type="text" ng-model="score" placeholder="1-10">

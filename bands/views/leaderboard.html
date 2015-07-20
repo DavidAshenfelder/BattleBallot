@@ -13,7 +13,7 @@
     <div class="middle">
     <h1 class="band-name">{{band.name}}</h1>
   </div>
-  <div class="right-side padding">
+  <div class="right-side-user padding">
     <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
     <accordion ng-if="!isAuth">
     <accordion-group is-open="status.open">
