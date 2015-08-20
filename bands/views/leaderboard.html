@@ -1,27 +1,33 @@
 <section class="panel bandMainWrapper">
   <div class="panel panel-header">
+    <a href="#/"><button class="btn">Home</button></a>
     <h3 class="bandMainHeader"><img src="images/ballot-icon.png" alt="">Battle Ballot</h3>
     <a href="#/admin" ng-click="authenticate()" ng-model="isAuth"><button class="btn">Login</button></a>
   </div>
   <div class="leaderboardHeader">
-    <h1>Leaderboard</h1>
+    <h1 class="leaderboard-header">Leaderboard</h1>
   </div>
-  <article class="admin-article" data-id="{{band.id}}" ng-repeat="band in bands | orderBy: '-total_score'">
-    <div class="left-side">
-      <h1>{{band.total_score}}</h1>
+    <article class="admin-article" data-id="{{band.id}}" ng-repeat="band in bands | orderBy: '-total_score'">
+      <div class="left-side">
+        <h1 class="band-name">{{band.name}}</h1>
+
+      </div>
+      <div class="middle">
+      <h1>Score: {{band.total_score}}</h1>
     </div>
-    <div class="middle">
-    <h1 class="band-name">{{band.name}}</h1>
+    <div class="right-side-user padding">
+      <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
+      <accordion ng-if="!isAuth">
+      <accordion-group is-open="status.open">
+         <accordion-heading>
+          Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+         </accordion-heading>
+        <form  name="reviewForm" novalidate>
+          <input type="number" min=1 max=10 class="vote" ng-model="score" placeholder="1-10" required>
+          </form>
+          <input type="button" name="name" value="Submit"  ng-click="reviewForm.$valid && vote(score, band.id)">
+
+      </accordion-group>
+    </accordion>
   </div>
-  <div class="right-side-user padding">
-    <a href="/admin/:{{band.id}}" ng-click="editBand()"><button class="editBand" ng-if="isAuth">Edit</button></a>
-    <accordion ng-if="!isAuth">
-    <accordion-group is-open="status.open">
-       <accordion-heading>
-        Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-       </accordion-heading>
-    <input type="text" class="vote" ng-model="score" placeholder="1-10">
-    <input type="button" name="name" value="Submit"  ng-click="vote(score, band.id)">
-  </accordion-group>
-</accordion>
-  </article>
+</article>

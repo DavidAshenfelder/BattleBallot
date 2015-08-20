@@ -22,8 +22,10 @@
          <accordion-heading class="vote-color">
           Vote <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
          </accordion-heading>
-        <input type="text" ng-model="score" placeholder="1-10">
-        <input type="button" name="name" value="Submit"  ng-click="vote(score, band.id)">
+         <form  name="reviewForm" novalidate>
+           <input type="number" min=1 max=10 class="vote" ng-model="score" placeholder="1-10" required>
+          </form>
+           <input type="button" name="name" value="Submit"  ng-click="reviewForm.$valid && vote(score, band.id)">
        </accordion-group>
       </accordion>
     </div>

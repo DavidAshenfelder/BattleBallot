@@ -28,6 +28,14 @@ a button {
   }
 }
 
+.ng-valid.ng-dirty {
+  border: 3px solid green;
+}
+
+.ng-invalid.ng-dirty {
+  border: 3px solid red;
+}
+
  .btn {
   background: $accent;
   color: $green;

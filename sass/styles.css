@@ -98,18 +98,19 @@ span.ng-scope {
   float: right;
   margin: 5px; }
 
-.admin-article {
-  padding: 20px;
-  border: 1px solid #D1DE36;
-  background-color: #022C3B;
-  border-radius: 5px;
-  width: 90%;
-  margin: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+/* .admin-article {
+padding: 20px;
+border: 1px solid $accent;
+background-color: $header;
+border-radius: 5px;
+width: 90%;
+margin: 1%;
+margin-left: auto;
+margin-right: auto;
+} */
+.leaderboard-header {
+  text-align: center;
+  color: #A7BA45; }
 
 .left-side {
   display: inline-block;
@@ -181,6 +182,12 @@ a button {
     color: #D1DE36;
     border: 1px solid #D1DE36;
     transition: ease .25s; }
+
+.ng-valid.ng-dirty {
+  border: 3px solid green; }
+
+.ng-invalid.ng-dirty {
+  border: 3px solid red; }
 
 .btn {
   background: #D1DE36;
